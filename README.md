@@ -5,6 +5,8 @@ Timesheet for Android™
 
 **See http://timesheet.rauscha.com for more information.**
 
+![Timesheet][3]
+
 Developed By
 ============
 
@@ -27,3 +29,6 @@ License
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+
+
+[3]: http://timesheet.rauscha.com/img/tabletPhoneSmall.png
