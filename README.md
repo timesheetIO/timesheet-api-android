@@ -3,14 +3,14 @@ Timesheet
 
 Timesheet for Android™
 
-**See http://timesheet.rauscha.com for more information.**
+**See http://timesheet.io for more information.**
 
 ![Timesheet][3]
 
 Developed By
 ============
 
-* Florian Rauscha - <florian.rauscha@gmail.com>
+* Florian Rauscha
 
 
 License
