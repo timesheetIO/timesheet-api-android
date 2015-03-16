@@ -1,11 +1,16 @@
-Timesheet
+Timesheet API
 =========
 
-Timesheet for Android™
+Timesheet API for Android™
 
 **See http://timesheet.io for more information.**
 
 ![Timesheet][3]
+
+Getting Started
+============
+
+TODO
 
 Developed By
 ============
