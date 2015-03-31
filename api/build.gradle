@@ -27,11 +27,17 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "maven"
-        name = POM_NAME
-        websiteUrl = POM_SCM_URL
-        vcsUrl = POM_GIT
+        name = NAME
+        websiteUrl = SCM_URL
+        vcsUrl = GIT_URL
         licenses = ["Apache-2.0"]
         publish = true
+		
+		version {
+            name = VERSION_NAME
+            desc = 'Initital release'
+            vcsTag = VERSION_NAME
+		}
     }
 }
 
@@ -46,27 +52,27 @@ install {
 
             packaging 'aar'
 
-            name POM_NAME
-            description POM_DESCRIPTION
-            url POM_URL
+            name NAME
+            description DESCRIPTION
+            url URL
 
             licenses {
                 license {
-                    name POM_LICENCE_NAME
-                    url POM_LICENCE_URL
+                    name LICENCE_NAME
+                    url LICENCE_URL
                 }
             }
             developers {
                 developer {
-                    id POM_DEVELOPER_ID
-                    name POM_DEVELOPER_NAME
-                    email POM_DEVELOPER_EMAIL
+                    id DEVELOPER_ID
+                    name DEVELOPER_NAME
+                    email DEVELOPER_EMAIL
                 }
             }
             scm {
-                connection POM_SCM_CONNECTION
-                developerConnection POM_SCM_DEV_CONNECTION
-                url POM_SCM_URL
+                connection SCM_CONNECTION
+                developerConnection SCM_DEV_CONNECTION
+                url SCM_URL
 
             }
 
