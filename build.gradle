@@ -32,8 +32,14 @@ bintray {
         vcsUrl = POM_GIT
         licenses = ["Apache-2.0"]
         publish = true
+        version {
+            name = VERSION_NAME
+            desc = POM_DESCRIPTION
+        }
     }
 }
+
+group = GROUP_ID
 
 install {
     repositories.mavenInstaller {
