@@ -1,95 +1,22 @@
-apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
 
-android {
-    compileSdkVersion 21
-    buildToolsVersion '21.1.2'
 
-    defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 21
+buildscript {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.1.2'
+        classpath 'com.github.dcendents:android-maven-plugin:1.2'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
     }
 }
 
-dependencies {
-    compile 'com.android.support:support-v4:21.0.3'
-}
-
-
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
-bintray {
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.apikey")
-
-    configurations = ['archives']
-    pkg {
-        repo = "maven"
-        name = POM_NAME
-        websiteUrl = POM_SCM_URL
-        vcsUrl = POM_GIT
-        licenses = ["Apache-2.0"]
-        publish = true
+allprojects {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        jcenter()
     }
-}
-
-install {
-    repositories.mavenInstaller {
-
-        pom.groupId = GROUP_ID
-        pom.artifactId = ARTIFACT_ID
-        pom.version = VERSION_NAME
-
-        pom.project {
-
-            packaging 'aar'
-
-            name POM_NAME
-            description POM_DESCRIPTION
-            url POM_URL
-
-            licenses {
-                license {
-                    name POM_LICENCE_NAME
-                    url POM_LICENCE_URL
-                }
-            }
-            developers {
-                developer {
-                    id POM_DEVELOPER_ID
-                    name POM_DEVELOPER_NAME
-                    email POM_DEVELOPER_EMAIL
-                }
-            }
-            scm {
-                connection POM_SCM_CONNECTION
-                developerConnection POM_SCM_DEV_CONNECTION
-                url POM_SCM_URL
-
-            }
-
-        }
-    }
-}
-
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
-}
-
-task javadoc(type: Javadoc) {
-    source = android.sourceSets.main.java.srcDirs
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-
-artifacts {
-    archives javadocJar
-    archives sourcesJar
 }
