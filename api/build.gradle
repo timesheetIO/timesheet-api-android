@@ -33,7 +33,7 @@ properties.load(project.rootProject.file('local.properties').newDataInputStream(
 bintray {
     user = properties.getProperty("bintray.user")
     key = properties.getProperty("bintray.apikey")
-	pass = properties.getProperty("bintray.pass")
+	
 
     configurations = ['archives']
     pkg {
@@ -50,7 +50,7 @@ bintray {
             vcsTag = VERSION_NAME
 			gpg {
 				sign = true
-				passphrase = pass
+				passphrase = properties.getProperty("bintray.pass")
 			}
 		}
     }
