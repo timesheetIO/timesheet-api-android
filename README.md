@@ -1,7 +1,7 @@
 ![Logo][1] Timesheet API
 ========================
 
-Timesheet API for Android™
+Timesheet API is an Android library project which allows you to access the Timesheet `ContentProvider`.
 
 **See https://timesheet.io for more information.**
 
@@ -50,7 +50,7 @@ if(mProjectCursor.moveToFirst()) {
 
 [![App Icon][6]][7]
 
-You can get the Time Tracker at the Playstore: [Timesheet - Time Tracker][7].
+You can get Timesheet at the Playstore: [Timesheet - Time Tracker][7].
 
 
 ## License
