@@ -1,11 +1,11 @@
-Timesheet API
-=========
+![Logo][1] Timesheet API
+========================
 
 Timesheet API for Android™
 
-**See http://timesheet.io for more information.**
+**See https://timesheet.io for more information.**
 
-![Timesheet][3]
+![Timesheet][2]
 
 ## Getting Started
 
@@ -25,7 +25,7 @@ You have to set two permissions to read from and write to the Timesheet Content 
 ```
 
 ### Data Queries
-Timesheet uses the [ContentProvider][2]. Just use one of the provided Data Queries to retrieve the data: 
+Timesheet uses the [ContentProvider][3]. Just use one of the provided Data Queries to retrieve the data: 
 ```java
 mProjectCursor = getContentResolver().query(
     TimesheetUris.PROJECTS,             // The content URI of projects
@@ -46,14 +46,16 @@ if(mProjectCursor.moveToFirst()) {
 }
 ``` 
 
-## Developed By
+## Download Timesheet
 
-* Florian Rauscha
+[![App Icon][6]][7]
+
+You can get the Time Tracker at the Playstore: [Timesheet - Time Tracker][7].
 
 
 ## License
 
-    Copyright 2012 Florian Rauscha
+    Copyright 2016 Florian Rauscha
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -67,7 +69,10 @@ if(mProjectCursor.moveToFirst()) {
     See the License for the specific language governing permissions and
     limitations under the License.
 
-[2]: http://developer.android.com/guide/topics/providers/content-provider-basics.html
-[3]: http://timesheet.io/app/img/tabletSmall.png
+[1]: art/icon_24.png
+[2]: https://timesheet.io/img/tabletSmall.png
+[3]: http://developer.android.com/guide/topics/providers/content-provider-basics.html
 [4]: https://github.com/timesheetIO/Android-API/blob/master/api/src/main/java/com/rauscha/apps/timesheet/api/utils/IntentUtils.java
 [5]: https://github.com/timesheetIO/Android-API/blob/master/api/src/main/java/com/rauscha/apps/timesheet/api/constants/Actions.java
+[6]: http://developer.android.com/images/brand/en_app_rgb_wo_60.png
+[7]: https://play.google.com/store/apps/details?id=com.rauscha.apps.timesheet
